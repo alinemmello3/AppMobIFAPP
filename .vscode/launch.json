@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "appmobifapp",
+            "cwd": "APPmobifapp\\appmobifapp",
+            "request": "launch",
+            "type": "dart",
+            "program": "tela_inicial.dart"
+        },
+        {
+            "name": "appmobifapp (profile mode)",
+            "cwd": "APPmobifapp\\appmobifapp",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "program": "tela_inicial.dart"
+        },
+        {
+            "name": "appmobifapp (release mode)",
+            "cwd": "APPmobifapp\\appmobifapp",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "program": "tela_inicial.dart"
+        }
+    ]
+}
