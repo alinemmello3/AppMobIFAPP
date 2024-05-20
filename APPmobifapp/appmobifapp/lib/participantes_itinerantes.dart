@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -14,7 +13,7 @@ class ParticipantesItinerantes extends StatelessWidget {
         title: const Text('Participantes Itinerantes'),
       ),
       // Chama o estado _ParticipantesItinerantesState, passando o título
-      body: const _ParticipantesItinerantesState(title: 'MobIFAPP'),
+      body: _ParticipantesItinerantesState(title: 'MobIFAPP'),
     );
   }
 }
@@ -50,6 +49,7 @@ class _ParticipantesItinerantesStateState
                   'assets/images/itinerante.JPG',
                   width: 50, // Tamanho da imagem
                   height: 50,
+                ),
               ),
             ),
             const SizedBox(height: 5),
@@ -82,14 +82,11 @@ class MapaComMarcadores extends StatefulWidget {
   const MapaComMarcadores({super.key});
 
   @override
-  @override
   MapaComMarcadoresState createState() => MapaComMarcadoresState();
 }
 
 class MapaComMarcadoresState extends State<MapaComMarcadores> {
   late GoogleMapController mapController; // Marcando mapController como late
-  //  para indicar que ela será inicializada posteriormente.
-  // verificar como funciona
 
   final LatLng _centroMapa = const LatLng(-23.550520, -46.633308);
   final List<Marker> _markers = []; // Lista de marcadores
