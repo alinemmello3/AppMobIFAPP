@@ -138,10 +138,8 @@ class MyHomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) =>
-                            const ServidorTemporario(
-                          title:
-                              'Cadastro Inscricoes Servidor Temporario IFRJ',
+                        builder: (context) => const ServidorTemporario(
+                          title: 'Cadastro Inscricoes Servidor Temporario IFRJ',
                         ),
                       ),
                     );
