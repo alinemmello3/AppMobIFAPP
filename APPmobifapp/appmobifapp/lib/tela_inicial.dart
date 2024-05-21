@@ -1,4 +1,4 @@
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 // Importing pages
 import 'acompanhamento_inscricao.dart';
@@ -9,6 +9,7 @@ import 'participantes_itinerantes.dart';
 import 'pontos_turisticos.dart';
 import 'universidades_participantes.dart';
 import 'guia_apoio.dart';
+import 'servidor_temporario.dart';
 
 void main() {
   runApp(const MyApp());
@@ -85,7 +86,7 @@ class MyHomePage extends StatelessWidget {
                   leading: Image.asset('assets/images/univerisade1.JPG',
                       width: 55, height: 55),
                   title: const Text(
-                    ' Cadastro das Instituições Conveniadas',
+                    'Cadastro das Instituições Conveniadas',
                     style: TextStyle(
                       color: Colors.blue,
                     ),
@@ -94,7 +95,8 @@ class MyHomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const CadastroInstituicaoConveniada(
+                        builder: (context) =>
+                            const CadastroInstituicaoConveniada(
                           title: '  Cadastro das Instituições Conveniadas',
                         ),
                       ),
@@ -102,7 +104,7 @@ class MyHomePage extends StatelessWidget {
                   },
                 ),
                 ListTile(
-                  leading: Image.asset('assets/images/alunos.JPG',
+                  leading: Image.asset('assets/images/aluno.JPG',
                       width: 55, height: 55),
                   title: const Text(
                     'Cadastro Participante mobilidade Internacional',
@@ -114,9 +116,32 @@ class MyHomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const CadastroMobilidadeInternacional(
+                        builder: (context) =>
+                            const CadastroMobilidadeInternacional(
                           title:
                               'Cadastro Participante mobilidade Internacional',
+                        ),
+                      ),
+                    );
+                  },
+                ),
+                ListTile(
+                  leading: Image.asset('assets/images/alunos.JPG',
+                      width: 55, height: 55),
+                  title: const Text(
+                    'Cadastro Para Servidor Temporario - Edital & Inscricoes',
+                    style: TextStyle(
+                      color: Colors.blue,
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            const ServidorTemporario(
+                          title:
+                              'Cadastro Inscricoes Servidor Temporario IFRJ',
                         ),
                       ),
                     );
@@ -136,7 +161,8 @@ class MyHomePage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => const MobilidadeInternacional(
-                          title: 'Mobilidade Internacional Servidor / Estudante',
+                          title:
+                              'Mobilidade Internacional Servidor / Estudante',
                         ),
                       ),
                     );
