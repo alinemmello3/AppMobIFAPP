@@ -1,42 +1,32 @@
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-// Widget para a página de participantes itinerantes
-class ParticipantesItinerantes extends StatelessWidget {
-  const ParticipantesItinerantes({Key? key, required String title})
+class MobilidadeInternacional extends StatelessWidget {
+  const MobilidadeInternacional({Key? key, required this.title})
       : super(key: key);
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Participantes Itinerantes'),
+        title: const Text('Servidor / Estudante em Mobilidade Internacional'),
       ),
-      // Chama o estado _ParticipantesItinerantesState, passando o título
-      body: _ParticipantesItinerantesState(title: 'MobIFAPP'),
+      body: const MobilidadeInternacionalState(),
     );
   }
 }
 
-// Estado para a página de participantes itinerantes
-class _ParticipantesItinerantesState extends StatefulWidget {
-  final String title;
+class MobilidadeInternacionalState extends StatelessWidget {
+  const MobilidadeInternacionalState({Key? key}) : super(key: key);
 
-  const _ParticipantesItinerantesState({Key? key, required this.title})
-      : super(key: key);
-
-  @override
-  State<_ParticipantesItinerantesState> createState() =>
-      _ParticipantesItinerantesStateState();
-}
-
-class _ParticipantesItinerantesStateState
-    extends State<_ParticipantesItinerantesState> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title), // Usa o título passado pelo widget
+        title: const Text('MobIFAPP'),
+        automaticallyImplyLeading: false, // Remove o botão de voltar
       ),
       body: Center(
         child: ListView(
@@ -47,7 +37,7 @@ class _ParticipantesItinerantesStateState
                 borderRadius: BorderRadius.circular(40),
                 child: Image.asset(
                   'assets/images/itinerante.JPG',
-                  width: 50, // Tamanho da imagem
+                  width: 50,
                   height: 50,
                 ),
               ),
@@ -77,19 +67,18 @@ class _ParticipantesItinerantesStateState
   }
 }
 
-// Widget para o mapa com marcadores
 class MapaComMarcadores extends StatefulWidget {
-  const MapaComMarcadores({super.key});
+  const MapaComMarcadores({Key? key}) : super(key: key);
 
   @override
   MapaComMarcadoresState createState() => MapaComMarcadoresState();
 }
 
 class MapaComMarcadoresState extends State<MapaComMarcadores> {
-  late GoogleMapController mapController; // Marcando mapController como late
+  late GoogleMapController mapController;
 
   final LatLng _centroMapa = const LatLng(-23.550520, -46.633308);
-  final List<Marker> _markers = []; // Lista de marcadores
+  final List<Marker> _markers = [];
 
   @override
   Widget build(BuildContext context) {
