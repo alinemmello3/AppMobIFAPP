@@ -1,10 +1,29 @@
 import 'package:flutter/material.dart';
+import 'inscricao.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Cadastro de Participantes',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const CadastroParticipantes(title: 'Cadastro de Participantes'),
+    );
+  }
+}
 
 class CadastroParticipantes extends StatelessWidget {
   final String title;
 
-  const CadastroParticipantes({Key? key, required this.title})
-      : super(key: key);
+  const CadastroParticipantes({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +35,7 @@ class CadastroParticipantes extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             Container(
-              margin:
-                  const EdgeInsets.only(top: 20), // Espaço supeior da imagem
+              margin: const EdgeInsets.only(top: 20), // Espaço superior da imagem
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(40),
                 child: Image.asset(
@@ -45,14 +63,15 @@ class CadastroParticipantes extends StatelessWidget {
               indent: 10,
               endIndent: 10,
             ),
+            const SizedBox(height: 20),
+            // Adicionando o formulário de cadastro
+            const TelaCadastro(),
           ],
         ),
       ),
     );
   }
 }
-
-//Ações referente a página
 
 // TelaCadastro é um StatefulWidget responsável pela tela de cadastro.
 class TelaCadastro extends StatefulWidget {
@@ -64,58 +83,106 @@ class TelaCadastro extends StatefulWidget {
 
 // _TelaCadastroState é a classe que mantém o estado da tela de cadastro.
 class _TelaCadastroState extends State<TelaCadastro> {
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _cpfController = TextEditingController();
+  final TextEditingController _dataNascimentoController = TextEditingController();
 
   @override
   void dispose() {
-    _emailController.dispose();
-    _passwordController.dispose();
+    _cpfController.dispose();
+    _dataNascimentoController.dispose();
     super.dispose();
+  }
+
+  void _submitForm() {
+    // Obtém o CPF e a data de nascimento digitados
+    String cpf = _cpfController.text;
+    String dataNascimento = _dataNascimentoController.text;
+
+    // Lógica para verificar se o usuário está cadastrado
+    bool isCadastrado = _verificarCadastro(cpf, dataNascimento);
+    if (isCadastrado) {
+      // Usuário já cadastrado, exibir mensagem ou realizar alguma ação
+      Logger.d('Usuário já cadastrado');
+    } else {
+      // Redirecionar para a página de inscrição
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => InscricaoScreen(cpf: cpf, dataNascimento: dataNascimento)),
+      );
+    }
+  }
+
+  bool _verificarCadastro(String cpf, String dataNascimento) {
+    // Lógica de verificação de cadastro (Exemplo simplificado)
+    // Aqui você pode adicionar a lógica para verificar se o usuário já está cadastrado
+    // Atualmente, sempre retorna falso para fins de demonstração
+    return false;
+  }
+
+  void _entrar() {
+    // Lógica para entrar
+    Logger.d('Entrou');
+  }
+
+  void _atualizar() {
+    // Lógica para atualizar
+    Logger.d('Dados atualizados');
+  }
+
+  void _excluir() {
+    // Lógica para excluir
+    Logger.d('Dados excluídos');
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Cadastro'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            // Campo de entrada para o email.
-            TextField(
-              controller: _emailController,
-              decoration: const InputDecoration(
-                labelText: 'Email',
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          // Campo de entrada para o CPF
+          TextField(
+            controller: _cpfController,
+            decoration: const InputDecoration(
+              labelText: 'CPF',
+            ),
+          ),
+          const SizedBox(height: 16.0),
+          // Campo de entrada para a data de nascimento
+          TextField(
+            controller: _dataNascimentoController,
+            decoration: const InputDecoration(
+              labelText: 'Data de Nascimento (DD/MM/AAAA)',
+            ),
+          ),
+          const SizedBox(height: 32.0),
+          // Botões adicionais lado a lado
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: _submitForm,
+                child: const Text('Cadastrar'),
               ),
-            ),
-            const SizedBox(height: 16.0),
-            // Campo de entrada para a senha.
-            TextField(
-              controller: _passwordController,
-              obscureText: true, // Mascara o texto digitado
-              decoration: const InputDecoration(
-                labelText: 'Senha',
+              const SizedBox(width: 10),
+              ElevatedButton(
+                onPressed: _entrar,
+                child: const Text('Entrar'),
               ),
-            ),
-            const SizedBox(height: 32.0),
-            // Botão para submeter o formulário de cadastro.
-            ElevatedButton(
-              onPressed: () {
-                // Obtém o email e a senha digitados
-                String email = _emailController.text;
-                String password = _passwordController.text;
-                // Registra o novo email e senha utilizando o logger.
-                Logger.d('Novo Email: $email');
-                Logger.d('Nova Senha: $password');
-              },
-              child: const Text('Cadastrar'),
-            ),
-          ],
-        ),
+              const SizedBox(width: 10),
+              ElevatedButton(
+                onPressed: _atualizar,
+                child: const Text('Atualizar'),
+              ),
+              const SizedBox(width: 10),
+              ElevatedButton(
+                onPressed: _excluir,
+                child: const Text('Excluir'),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
