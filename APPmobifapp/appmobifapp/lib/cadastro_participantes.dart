@@ -15,15 +15,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const CadastroParticipantes(title: 'Cadastro de Participantes'),
+      home: const CadastroMobilidadeInternacional(title: 'Cadastro de Participantes'),
     );
   }
 }
 
-class CadastroParticipantes extends StatelessWidget {
+class CadastroMobilidadeInternacional extends StatelessWidget {
   final String title;
 
-  const CadastroParticipantes({Key? key, required this.title}) : super(key: key);
+  const CadastroMobilidadeInternacional({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
