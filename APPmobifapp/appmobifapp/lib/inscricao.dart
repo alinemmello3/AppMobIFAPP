@@ -75,13 +75,25 @@ class InscricaoScreen extends StatelessWidget {
               controller: TextEditingController(text: dataNascimento),
             ),
             const SizedBox(height: 32.0),
-            ElevatedButton(
-              onPressed: () {
-                // Lógica para salvar o cadastro completo
-                Logger.d('Cadastro completo salvo');
-                Navigator.pop(context);
-              },
-              child: const Text('Salvar Cadastro'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    // Lógica para anexar arquivo
+                    Logger.d('Arquivo anexado');
+                  },
+                  child: const Text('Anexar Arquivo'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    // Lógica para salvar o cadastro completo
+                    Logger.d('Cadastro completo salvo');
+                    Navigator.pop(context);
+                  },
+                  child: const Text('Salvar Cadastro'),
+                ),
+              ],
             ),
           ],
         ),
