@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'inscricoes_servidor.dart';
 
 class ServidorTemporario extends StatelessWidget {
   final String title;
@@ -54,7 +55,7 @@ class ServidorTemporario extends StatelessWidget {
               quantidadeVagas: 5,
               dataAberturaEdital: '01/07/2024',
               dataFinalizacaoEdital: '15/07/2024',
-              linkEdital: 'https://exemplo.com/edital_universidade_x.pdf',
+              context: context,
             ),
             const SizedBox(height: 20),
             _buildServidorTemporario(
@@ -62,11 +63,11 @@ class ServidorTemporario extends StatelessWidget {
               curso: 'Ciência da Computação',
               pais: 'Estados Unidos',
               cidade: 'Nova York',
-              descricaoVaga: ' Professor Calculo I,II & III',
+              descricaoVaga: 'Professor Calculo I,II & III',
               quantidadeVagas: 3,
               dataAberturaEdital: '10/07/2024',
               dataFinalizacaoEdital: '25/07/2024',
-              linkEdital: 'https://exemplo.com/edital_universidade_y.pdf',
+              context: context,
             ),
           ],
         ),
@@ -83,7 +84,7 @@ class ServidorTemporario extends StatelessWidget {
     required int quantidadeVagas,
     required String dataAberturaEdital,
     required String dataFinalizacaoEdital,
-    required String linkEdital,
+    required BuildContext context,
   }) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -101,13 +102,32 @@ class ServidorTemporario extends StatelessWidget {
         SizedBox(height: 5),
         Text('Finalização do Edital: $dataFinalizacaoEdital'),
         SizedBox(height: 5),
-        TextButton(
-          onPressed: () {
-            // Lógica para abrir o link do edital
-            // Aqui você pode usar o pacote url_launcher para abrir o link
-          },
-          child:
-              Text('Visualizar Edital', style: TextStyle(color: Colors.blue)),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            TextButton(
+              onPressed: () {
+                // Lógica para abrir o link do edital
+                // _launchURL(linkEdital); // Removido
+              },
+              child: Text('Visualizar Edital',
+                  style: TextStyle(color: Colors.blue)),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => InscricaoServidor(
+                      instituicao: nome,
+                      curso: curso,
+                    ),
+                  ),
+                );
+              },
+              child: Text('Inscrição', style: TextStyle(color: Colors.blue)),
+            ),
+          ],
         ),
         const Divider(
           height: 20,
