@@ -142,7 +142,7 @@ class AcompanhamentoInscricao extends StatelessWidget {
                       );
                     }
                   },
-                  child: const Text('Login'),
+                  child: const Text('salvar'),
                 ),
               ],
             ),
