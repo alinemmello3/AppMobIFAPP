@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
 
 // Importing pages
 import 'acompanhamento_inscricao.dart';
@@ -35,7 +35,7 @@ class MyHomePage extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      backgroundColor: Color.fromARGB(235, 190, 213, 243),
+      backgroundColor: const Color.fromARGB(235, 190, 213, 243),
       appBar: AppBar(
         title: Text(title),
       ),
@@ -71,7 +71,7 @@ class MyHomePage extends StatelessWidget {
                 ListTile(
                   leading: Image.asset('assets/images/home.JPG',
                       width: 55, height: 55),
-                  title: Text(
+                  title: const Text(
                     'Home',
                     style: TextStyle(
                       color: Colors.blue,
@@ -84,8 +84,8 @@ class MyHomePage extends StatelessWidget {
                 ListTile(
                   leading: Image.asset('assets/images/univerisade1.JPG',
                       width: 55, height: 55),
-                  title: Text(
-                    'Universidades Conveniadas',
+                  title: const Text(
+                    ' Cadastro das Instituições Conveniadas',
                     style: TextStyle(
                       color: Colors.blue,
                     ),
@@ -94,8 +94,8 @@ class MyHomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const CadastroUniversidade(
-                          title: 'Universidades Conveniadas',
+                        builder: (context) => const CadastroInstituicaoConveniada(
+                          title: '  Cadastro das Instituições Conveniadas',
                         ),
                       ),
                     );
@@ -104,8 +104,8 @@ class MyHomePage extends StatelessWidget {
                 ListTile(
                   leading: Image.asset('assets/images/alunos.JPG',
                       width: 55, height: 55),
-                  title: Text(
-                    'Estudante/Servidor em mobilidade Internacional',
+                  title: const Text(
+                    'Cadastro Participante mobilidade Internacional',
                     style: TextStyle(
                       color: Colors.blue,
                     ),
@@ -114,9 +114,9 @@ class MyHomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const CadastroParticipantes(
+                        builder: (context) => const CadastroMobilidadeInternacional(
                           title:
-                              'Estudante/Servidor em mobilidade Internacional',
+                              'Cadastro Participante mobilidade Internacional',
                         ),
                       ),
                     );
@@ -125,8 +125,8 @@ class MyHomePage extends StatelessWidget {
                 ListTile(
                   leading: Image.asset('assets/images/mapa.JPG',
                       width: 55, height: 55),
-                  title: Text(
-                    'Instituições Conveniadas',
+                  title: const Text(
+                    'Mobilidade Internacional Servidor / Estudante',
                     style: TextStyle(
                       color: Colors.blue,
                     ),
@@ -135,8 +135,8 @@ class MyHomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const ParticipantesItinerantes(
-                          title: 'Instituições Conveniadas',
+                        builder: (context) => const MobilidadeInternacional(
+                          title: 'Mobilidade Internacional Servidor / Estudante',
                         ),
                       ),
                     );
@@ -145,7 +145,7 @@ class MyHomePage extends StatelessWidget {
                 ListTile(
                   leading: Image.asset('assets/images/ponto.JPG',
                       width: 55, height: 55),
-                  title: Text(
+                  title: const Text(
                     'Cadastro dos Pontos Turísticos',
                     style: TextStyle(
                       color: Colors.blue,
@@ -221,8 +221,8 @@ class MyHomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const UniversidadesParticipantes(
-                      title: 'Universidades Participantes',
+                    builder: (context) => const InstituicaoConveniada(
+                      title: 'Instituições conveniadas',
                     ),
                   ),
                 );
@@ -298,8 +298,8 @@ class MyHomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const ParticipantesItinerantes(
-                      title: 'Servidor/Estudante em mobilidade Internacional',
+                    builder: (context) => const MobilidadeInternacional(
+                      title: 'Participante em Mobilidade Internacional',
                     ),
                   ),
                 );
@@ -309,7 +309,7 @@ class MyHomePage extends StatelessWidget {
                   Image.asset('assets/images/mapa.JPG', width: 55, height: 55),
                   const SizedBox(width: 20),
                   const Text(
-                    'Servidor/Estudante em mobilidade Internacional',
+                    'Participante mobilidade Internacional',
                     style: TextStyle(
                       color: Colors.blue,
                     ),
