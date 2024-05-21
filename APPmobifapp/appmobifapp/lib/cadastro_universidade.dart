@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class CadastroUniversidade extends StatelessWidget {
+class CadastroInstituicaoConveniada extends StatelessWidget {
   final String title;
 
-  const CadastroUniversidade({Key? key, required this.title}) : super(key: key);
+  const CadastroInstituicaoConveniada({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
