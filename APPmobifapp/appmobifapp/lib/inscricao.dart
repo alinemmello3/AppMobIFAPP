@@ -18,7 +18,15 @@ class InscricaoScreen extends StatelessWidget {
           children: <Widget>[
             const SizedBox(height: 20),
             TextField(
-              decoration: const InputDecoration(labelText: 'Endereço'),
+              decoration: const InputDecoration(labelText: 'Nome'),
+            ),
+            const SizedBox(height: 16.0),
+            TextField(
+              decoration: const InputDecoration(labelText: 'País'),
+            ),
+            const SizedBox(height: 16.0),
+            TextField(
+              decoration: const InputDecoration(labelText: 'UF/Região'),
             ),
             const SizedBox(height: 16.0),
             TextField(
@@ -26,7 +34,27 @@ class InscricaoScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16.0),
             TextField(
-              decoration: const InputDecoration(labelText: 'País'),
+              decoration: const InputDecoration(labelText: 'Curso'),
+            ),
+            const SizedBox(height: 16.0),
+            TextField(
+              decoration: const InputDecoration(labelText: 'Instituição de Origem'),
+            ),
+            const SizedBox(height: 16.0),
+            TextField(
+              decoration: const InputDecoration(labelText: 'Instituição de Destino'),
+            ),
+            const SizedBox(height: 16.0),
+            TextField(
+              decoration: const InputDecoration(labelText: 'Escolaridade'),
+            ),
+            const SizedBox(height: 16.0),
+            TextField(
+              decoration: const InputDecoration(labelText: 'Tipo de Vínculo'),
+            ),
+            const SizedBox(height: 16.0),
+            TextField(
+              decoration: const InputDecoration(labelText: 'Anexar Documentos'),
             ),
             const SizedBox(height: 16.0),
             TextField(
