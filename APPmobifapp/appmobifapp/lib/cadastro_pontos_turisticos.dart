@@ -14,6 +14,7 @@ class CadastroPontosTuristicos extends StatelessWidget {
       ),
       body: Center(
         child: ListView(
+          padding: const EdgeInsets.all(16.0),
           children: <Widget>[
             Container(
               margin:
@@ -22,16 +23,16 @@ class CadastroPontosTuristicos extends StatelessWidget {
                 borderRadius: BorderRadius.circular(40),
                 child: Image.asset(
                   'assets/images/mapa1.JPG',
-                  width: 50, // Tamanho da imagem
-                  height: 50,
+                  width: 100, // Ajustado tamanho da imagem
+                  height: 100,
                 ),
               ),
             ),
-            const SizedBox(height: 5),
+            const SizedBox(height: 10),
             const Text(
               'MobIFAPP',
               style: TextStyle(
-                fontSize: 15, // Tamanho da Fonte
+                fontSize: 20, // Ajustado tamanho da fonte
                 fontWeight: FontWeight.bold, // Estilo da fonte negrito
                 color: Colors.black,
               ),
@@ -41,13 +42,84 @@ class CadastroPontosTuristicos extends StatelessWidget {
             const Divider(
               height: 2,
               color: Colors.black,
-              thickness: 4, // Espessura da linha
+              thickness: 2, // Espessura da linha
               indent: 10,
               endIndent: 10,
+            ),
+            const SizedBox(height: 20),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Nome do ponto turístico',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            const SizedBox(height: 10),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'País',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            const SizedBox(height: 10),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Cidade',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            const SizedBox(height: 10),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Principais informações turísticas',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            const SizedBox(height: 10),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Distância da capital',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            const SizedBox(height: 10),
+            TextField(
+              decoration: InputDecoration(
+                labelText:
+                    'Principais pontos de apoio (rodoviária, restaurantes, hotéis)',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            const SizedBox(height: 10),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Descrição do ponto turístico',
+                border: OutlineInputBorder(),
+              ),
+              maxLines: 4, // Permitir várias linhas para a descrição
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                // Ação para anexar fotos
+              },
+              child: const Text('Anexar fotos'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                // Ação para enviar os dados
+              },
+              child: const Text('Enviar'),
             ),
           ],
         ),
       ),
     );
   }
+}
+
+void main() {
+  runApp(const MaterialApp(
+    home: CadastroPontosTuristicos(title: 'Cadastro de Pontos Turísticos'),
+  ));
 }
