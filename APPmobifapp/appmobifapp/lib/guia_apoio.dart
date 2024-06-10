@@ -131,7 +131,7 @@ class RegiaoMetropolitana extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          'Copacabana: R\$ 500 - R\$ 1.200 ou mais. Esses valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
+                          'Copacabana: Valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
                           style: TextStyle(
                             color: Colors.blue,
                             fontSize: 18, // Increased font size to 18
@@ -167,7 +167,7 @@ class RegiaoMetropolitana extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          'Botafogo: R\$ 400 - R\$ 1.200 ou mais. Esses valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
+                          'Botafogo:Valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
                           style: TextStyle(
                             color: Colors.blue,
                             fontSize: 18, // Increased font size to 18
@@ -203,7 +203,7 @@ class RegiaoMetropolitana extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          'Leme: R\$ 400 - R\$ 1.200 ou mais. Esses valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
+                          'Leme: Valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
                           style: TextStyle(
                             color: Colors.blue,
                             fontSize: 18, // Increased font size to 18
@@ -239,7 +239,7 @@ class RegiaoMetropolitana extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          'Ipanema: R\$ 300 - R\$ 800 ou mais. Esses valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
+                          'Ipanema: Valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
                           style: TextStyle(
                             color: Colors.blue,
                             fontSize: 18, // Increased font size to 18
@@ -275,7 +275,7 @@ class RegiaoMetropolitana extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          'Leblon: R\$ 300 - R\$ 800 ou mais. Esses valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
+                          'Leblon: Valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
                           style: TextStyle(
                             color: Colors.blue,
                             fontSize: 18, // Increased font size to 18
@@ -311,7 +311,7 @@ class RegiaoMetropolitana extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          'Vidigal: R\$ 200 - R\$ 600 ou mais. Esses valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
+                          'Vidigal: Valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
                           style: TextStyle(
                             color: Colors.blue,
                             fontSize: 18, // Increased font size to 18
@@ -347,7 +347,7 @@ class RegiaoMetropolitana extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          'São Conrado: R\$ 200 - R\$ 600 ou mais. Esses valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
+                          'São Conrado: Valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
                           style: TextStyle(
                             color: Colors.blue,
                             fontSize: 18, // Increased font size to 18
@@ -383,7 +383,7 @@ class RegiaoMetropolitana extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          'Glória: R\$ 400 - R\$ 800 ou mais. Esses valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
+                          'Glória: Valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
                           style: TextStyle(
                             color: Colors.blue,
                             fontSize: 18, // Increased font size to 18
@@ -419,7 +419,7 @@ class RegiaoMetropolitana extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          'Urca: R\$ 400 - R\$ 800 ou mais. Esses valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
+                          'Urca: Valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
                           style: TextStyle(
                             color: Colors.blue,
                             fontSize: 18, // Increased font size to 18
@@ -493,7 +493,7 @@ class RegiaoDosLagos extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          'Búzios: R\$ 400 - R\$ 1.000 ou mais. Esses valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
+                          'Búzios: Valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
                           style: TextStyle(
                             color: Colors.blue,
                             fontSize: 18, // Increased font size to 18
@@ -529,7 +529,7 @@ class RegiaoDosLagos extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          'Cabo Frio: R\$ 400 - R\$ 800 ou mais. Esses valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
+                          'Cabo Frio: Valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
                           style: TextStyle(
                             color: Colors.blue,
                             fontSize: 18, // Increased font size to 18
@@ -565,7 +565,7 @@ class RegiaoDosLagos extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          'Arraial do cabo: R\$ 300 - R\$ 800 ou mais. Esses valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
+                          'Arraial do cabo: Valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
                           style: TextStyle(
                             color: Colors.blue,
                             fontSize: 18, // Increased font size to 18
@@ -601,7 +601,7 @@ class RegiaoDosLagos extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          'Saquarema: R\$ 300 - R\$ 600. Esses valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
+                          'Saquarema: Valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
                           style: TextStyle(
                             color: Colors.blue,
                             fontSize: 18, // Increased font size to 18
@@ -679,7 +679,7 @@ class RegiaoSulFluminense extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          'Paraty: R\$ 300 - R\$ 500 ou mais. Esses valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
+                          'Paraty: Valores são aproximados e podem variar dependendo da localização específica, temporada, tipo de acomodação e outros fatores.',
                           style: TextStyle(
                             color: Colors.blue,
                             fontSize: 18, // Increased font size to 18
