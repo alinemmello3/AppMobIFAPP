@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  google_maps_flutter: ^2.0.6
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -130,6 +131,16 @@ flutter:
   - assets/images/vidigal.jpg
   - assets/images/volta.JPG
   - assets/images/volta1.JPG
+  - assets/images/mac.png
+  - assets/images/parquecidade.JPG
+  - assets/images/Itacoatiara.JPG
+  - assets/images/fortaleza.JPG
+  - assets/images/campo.JPG
+  - assets/images/marina.JPG
+  - assets/images/matriz.JPG
+  - assets/images/cataguases.JPG
+  - assets/images/Gipoia.JPG
+  - assets/images/ilha.JPG
   # To add assets to your application, add an assets section, like this:
 
   # An image asset can refer to one or more resolution-specific "variants", see
