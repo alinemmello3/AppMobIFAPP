@@ -11,6 +11,7 @@ import 'pontos_turisticos.dart';
 import 'universidades_participantes.dart';
 import 'guia_apoio.dart';
 import 'servidor_temporario.dart';
+import 'aluno_temporario.dart';
 
 void main() {
   runApp(const MyApp());
@@ -55,25 +56,22 @@ class MyHomePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       CircleAvatar(
-                        radius: 40,
-                        backgroundImage:
-                            AssetImage('assets/images/mobifapp.JPG'),
+                        radius: 80,
+                        backgroundImage: AssetImage('assets/images/mobifapp.JPG'),
                       ),
                       SizedBox(height: 20),
                       Text(
                         'MobIFAPP',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize:
-                              20, // Updated font size for better visibility
+                          fontSize: 20, // Updated font size for better visibility
                         ),
                       ),
                     ],
                   ),
                 ),
                 ListTile(
-                  leading: Image.asset('assets/images/home.JPG',
-                      width: 55, height: 55),
+                  leading: Image.asset('assets/images/home.JPG', width: 55, height: 55),
                   title: const Text(
                     'Home',
                     style: TextStyle(
@@ -84,16 +82,13 @@ class MyHomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const Home(
-                          title: 'Home',
-                        ),
+                        builder: (context) => const Home(title: 'Home'),
                       ),
                     );
                   },
                 ),
                 ListTile(
-                  leading: Image.asset('assets/images/univerisade1.JPG',
-                      width: 55, height: 55),
+                  leading: Image.asset('assets/images/univerisade1.JPG', width: 55, height: 55),
                   title: const Text(
                     'Cadastro das Instituições Conveniadas',
                     style: TextStyle(
@@ -104,8 +99,7 @@ class MyHomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) =>
-                            const CadastroInstituicaoConveniada(
+                        builder: (context) => const CadastroInstituicaoConveniada(
                           title: 'Cadastro das Instituições Conveniadas',
                         ),
                       ),
@@ -113,8 +107,7 @@ class MyHomePage extends StatelessWidget {
                   },
                 ),
                 ListTile(
-                  leading: Image.asset('assets/images/aluno.JPG',
-                      width: 55, height: 55),
+                  leading: Image.asset('assets/images/aluno.JPG', width: 55, height: 55),
                   title: const Text(
                     'Cadastro Participante Mobilidade Internacional',
                     style: TextStyle(
@@ -125,20 +118,17 @@ class MyHomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) =>
-                            const CadastroMobilidadeInternacional(
-                          title:
-                              'Cadastro Participante Mobilidade Internacional',
+                        builder: (context) => const CadastroMobilidadeInternacional(
+                          title: 'Cadastro Participante Mobilidade Internacional',
                         ),
                       ),
                     );
                   },
                 ),
                 ListTile(
-                  leading: Image.asset('assets/images/alunos.JPG',
-                      width: 55, height: 55),
+                  leading: Image.asset('assets/images/alunos.JPG', width: 55, height: 55),
                   title: const Text(
-                    'Cadastro Para Servidor Temporário - Edital & Inscrições',
+                    'Sou Professor Estrangeiro quero realizar uma mobilidade no IFRJ',
                     style: TextStyle(
                       color: Colors.blue,
                     ),
@@ -148,15 +138,33 @@ class MyHomePage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => const ServidorTemporario(
-                          title: 'Cadastro Inscrições Servidor Temporário IFRJ',
+                          title: 'Sou Professor Estrangeiro quero realizar uma mobilidade no IFRJ',
                         ),
                       ),
                     );
                   },
                 ),
                 ListTile(
-                  leading: Image.asset('assets/images/mapa.JPG',
-                      width: 55, height: 55),
+                  leading: Image.asset('assets/images/alunos.JPG', width: 55, height: 55),
+                  title: const Text(
+                    'Sou Aluno Estrangeiro quero realizar uma mobilidade no IFRJ',
+                    style: TextStyle(
+                      color: Colors.blue,
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const AlunoTemporario(
+                          title: 'Sou Aluno Estrangeiro quero realizar uma mobilidade no IFRJ',
+                        ),
+                      ),
+                    );
+                  },
+                ),
+                ListTile(
+                  leading: Image.asset('assets/images/mapa.JPG', width: 55, height: 55),
                   title: const Text(
                     'Mobilidade Internacional Servidor / Estudante',
                     style: TextStyle(
@@ -168,16 +176,14 @@ class MyHomePage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => const MobilidadeInternacional(
-                          title:
-                              'Mobilidade Internacional Servidor / Estudante',
+                          title: 'Mobilidade Internacional Servidor / Estudante',
                         ),
                       ),
                     );
                   },
                 ),
                 ListTile(
-                  leading: Image.asset('assets/images/ponto.JPG',
-                      width: 55, height: 55),
+                  leading: Image.asset('assets/images/ponto.JPG', width: 55, height: 55),
                   title: const Text(
                     'Cadastro dos Pontos Turísticos',
                     style: TextStyle(
@@ -204,9 +210,7 @@ class MyHomePage extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             Container(
-              margin: const EdgeInsets.only(
-                top: 20,
-              ),
+              margin: const EdgeInsets.only(top: 20),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(40),
                 child: Image.asset(
@@ -240,9 +244,7 @@ class MyHomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Home(
-                      title: 'HOME',
-                    ),
+                    builder: (context) => const Home(title: 'HOME'),
                   ),
                 );
               },
@@ -273,8 +275,7 @@ class MyHomePage extends StatelessWidget {
               },
               title: Row(
                 children: [
-                  Image.asset('assets/images/univerisade1.JPG',
-                      width: 55, height: 55),
+                  Image.asset('assets/images/univerisade1.JPG', width: 55, height: 55),
                   const SizedBox(width: 20),
                   const Text(
                     'Instituições Conveniadas',
@@ -299,8 +300,7 @@ class MyHomePage extends StatelessWidget {
               },
               title: Row(
                 children: [
-                  Image.asset('assets/images/alunos.JPG',
-                      width: 55, height: 55),
+                  Image.asset('assets/images/alunos.JPG', width: 55, height: 55),
                   const SizedBox(width: 20),
                   const Text(
                     'Acompanhamento de Inscrição',
