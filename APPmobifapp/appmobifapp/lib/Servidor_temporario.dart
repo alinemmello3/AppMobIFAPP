@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'inscricoes_servidor.dart';
+
 
 class ServidorTemporario extends StatelessWidget {
   final String title;
@@ -46,97 +46,84 @@ class ServidorTemporario extends StatelessWidget {
               endIndent: 10,
             ),
             // Informações das instituições conveniadas
-            _buildServidorTemporario(
-              nome: 'Universidade X',
-              curso: 'Engenharia de Software',
-              pais: 'Brasil',
-              cidade: 'São Paulo',
-              descricaoVaga: 'Professor Engenharia ',
-              quantidadeVagas: 5,
-              dataAberturaEdital: '01/07/2024',
-              dataFinalizacaoEdital: '15/07/2024',
-              context: context,
-            ),
-            const SizedBox(height: 20),
-            _buildServidorTemporario(
-              nome: 'Universidade Y',
-              curso: 'Ciência da Computação',
-              pais: 'Estados Unidos',
-              cidade: 'Nova York',
-              descricaoVaga: 'Professor Calculo I,II & III',
-              quantidadeVagas: 3,
-              dataAberturaEdital: '10/07/2024',
-              dataFinalizacaoEdital: '25/07/2024',
-              context: context,
-            ),
+            _buildServidorTemporario(context: context),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildServidorTemporario({
-    required String nome,
-    required String curso,
-    required String pais,
-    required String cidade,
-    required String descricaoVaga,
-    required int quantidadeVagas,
-    required String dataAberturaEdital,
-    required String dataFinalizacaoEdital,
-    required BuildContext context,
-  }) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Instituição: $nome - $curso',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-        SizedBox(height: 5),
-        Text('País: $pais - Cidade: $cidade'),
-        SizedBox(height: 5),
-        Text('Descrição da Vaga: $descricaoVaga - Vagas: $quantidadeVagas'),
-        SizedBox(height: 5),
-        Text('Abertura do Edital: $dataAberturaEdital'),
-        SizedBox(height: 5),
-        Text('Finalização do Edital: $dataFinalizacaoEdital'),
-        SizedBox(height: 5),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            TextButton(
-              onPressed: () {
-                // Lógica para abrir o link do edital
-                // _launchURL(linkEdital); // Removido
-              },
-              child: Text('Visualizar Edital',
-                  style: TextStyle(color: Colors.blue)),
+  Widget _buildServidorTemporario({required BuildContext context}) {
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const <Widget>[
+          Text(
+            'Manual do Servidor – Contratação de Professor Visitante/Visitante Estrangeiro – PSS já realizado',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
             ),
-            TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => InscricaoServidor(
-                      instituicao: nome,
-                      curso: curso,
-                    ),
-                  ),
-                );
-              },
-              child: Text('Inscrição', style: TextStyle(color: Colors.blue)),
-            ),
-          ],
-        ),
-        const Divider(
-          height: 20,
-          color: Colors.black,
-          thickness: 1, // Espessura da linha
-          indent: 10,
-          endIndent: 10,
-        ),
-      ],
+          ),
+          SizedBox(height: 10),
+          Text(
+            'DEFINIÇÃO\n'
+            'A contratação de Professor Visitante e/ou Visitante Estrangeiro é a modalidade de contratação temporária, por tempo determinado, visando atender a necessidade de excepcional interesse público, dos órgãos da Administração Federal direta, das autarquias e das fundações públicas, nas condições e prazos previstos na Lei nº 8.745, de 9 de dezembro de 1993.',
+            style: TextStyle(fontSize: 14),
+          ),
+          SizedBox(height: 10),
+          Text(
+            'REQUISITOS BÁSICOS\n'
+            'A contratação de professores visitantes e professores visitantes estrangeiros poderá ser autorizada pelo dirigente da instituição, condicionada à existência de recursos orçamentários e financeiros para fazer frente às despesas decorrentes da contratação e ao quantitativo máximo de contratos estabelecido para a IFE.',
+            style: TextStyle(fontSize: 14),
+          ),
+          SizedBox(height: 10),
+          Text(
+            'INFORMAÇÕES IMPORTANTES\n'
+            'A contratação de Professor Visitante tem como objetivo:\n'
+            'I – apoiar a execução e o desenvolvimento dos Programas de Pós-Graduação Stricto Sensu (Mestrado e Doutorado);\n'
+            'II – oferecer condições para que professores de competência e capacidade comprovadas, provenientes de outros centros de ensino e pesquisa do país ou do exterior, contribuam para o aprimoramento de Programas de Ensino de Pós-Graduação e Pesquisa;\n'
+            'III – contribuir para a execução de programas de capacitação de docentes;\n'
+            'IV – viabilizar a participação de cientistas de alto nível nas equipes docentes e discentes da Instituição, visando propiciar o intercâmbio acadêmico, científico e cultural, em nível institucional, nacional e internacional.',
+            style: TextStyle(fontSize: 14),
+          ),
+          SizedBox(height: 10),
+          Text(
+            'PROCEDIMENTO E DOCUMENTAÇÃO\n'
+            '• Oficio de contratação de Professor Visitante, com a devida justificativa;\n'
+            '• Plano de Trabalho Individual (PIT) do Visitante para o bienio;\n'
+            '• Edital de abertura do PSS;\n'
+            '• Edital de homologação do resultado publicado no Diário Oficial da União;\n'
+            '• Caso exista, Edital de prorrogação do prazo de validade do PSS.',
+            style: TextStyle(fontSize: 14),
+          ),
+          SizedBox(height: 10),
+          Text(
+            'FLUXO PROCESSO\n'
+            '1. Processo Eletrônico: Abrir processo via SIPAC (login>mesa virtual>abrir processo)\n'
+            '2. Unidade Acadêmica: Encaminhar documentos: Oficio solicitando a contratação do Visitante aprovado, Ata de aprovação da contratação;\n'
+            '3. PROPLAN: Realiza a análise do Banco de Equivalente e informa a viabilidade de contratação e envia a PROPESP;\n'
+            '4. PROPESP: Autoriza a contratação do Visitante\n'
+            '5. CSA: Faz a convocação do visitante e contrata.',
+            style: TextStyle(fontSize: 14),
+          ),
+          SizedBox(height: 10),
+          Text(
+            'FUNDAMENTO LEGAL\n'
+            'Lei nº 8.745/93, Decreto n. nº 9.739/2019, DECRETO Nº 7.485, DE 18 DE MAIO DE 2011, Resolução n. 5.087/2018 – CONSEPE Resolução n., 5.030/2020 CONSEPE. Resolução das Unidades proponentes do PSS.',
+            style: TextStyle(fontSize: 14),
+          ),
+          SizedBox(height: 10),
+          Text(
+            'RESPONSÁVEL\n'
+            'Coordenadoria de Seleção e Admissão – CSA\n'
+            'Localização: Prédio da Reitoria 1º andar sala 17\n'
+            'E-mail: csa-progep@ufpa.br',
+            style: TextStyle(fontSize: 14),
+          ),
+        ],
+      ),
     );
   }
 }
